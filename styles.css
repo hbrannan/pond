@@ -25,3 +25,11 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.rotifer{
+  height: 25px;
+  width: 40px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+}
