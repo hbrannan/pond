@@ -2,7 +2,7 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.addDancerButton').on('click', function(event) {
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    var dancerMakerFunctionName = $(this).data('dancer-maker');
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
@@ -20,13 +20,13 @@ $(document).ready(function() {
   $('.addRotiferButton').on('click', function(event) {
 
     var rotiferMaker = $(this).data('rotifer-maker');
-    console.log($(this.data), rotiferMaker, window[makeRotifer]);
-    var rotiferMakerFunction = window[makeRotifer];
+    console.log(rotiferMaker)
+    var rotiferMakerFunction = window[rotiferMaker];
 
     // get the maker function for the kind of dancer we're supposed to make
     // var dancerMakerFunction = window[dancerMakerFunctionName];
 
-    var rotifer = makeRotifer (
+    var rotifer = rotiferMakerFunction (
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
